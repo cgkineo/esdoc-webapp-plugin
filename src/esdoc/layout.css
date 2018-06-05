@@ -1,0 +1,10 @@
+.navigation,
+.footer {
+  width: 300px;
+}
+.content {
+  margin-left: 300px;
+}
+.loading .content {
+    opacity:  0.5;
+}

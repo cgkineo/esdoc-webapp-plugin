@@ -1,0 +1,30 @@
+{
+  "deprecated": false,
+  "description": "A WebApp plugin for ESDoc",
+  "devDependencies": {
+    "esdoc": "latest",
+    "mocha": "2.5.3"
+  },
+  "dependencies": {
+    "cheerio": "0.22.0",
+    "fs-extra": "1.0.0"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "homepage": "https://github.com/cgkineo/esdoc-webapp-plugin",
+  "keywords": [
+    "esdoc",
+    "inject",
+    "style",
+    "plugin"
+  ],
+  "license": "GPL",
+  "main": "src/Plugin.js",
+  "name": "esdoc-webapp-plugin",
+  "version": "1.0.0"
+}
