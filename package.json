@@ -1,14 +1,10 @@
 {
-  "deprecated": false,
-  "description": "A WebApp plugin for ESDoc",
-  "devDependencies": {
-    "esdoc": "latest",
-    "mocha": "2.5.3"
-  },
   "dependencies": {
     "cheerio": "0.22.0",
     "fs-extra": "1.0.0"
   },
+  "deprecated": false,
+  "description": "A WebApp plugin for ESDoc",
   "engines": {
     "node": ">= 6.0.0"
   },
@@ -26,5 +22,5 @@
   "license": "GPL",
   "main": "src/Plugin.js",
   "name": "esdoc-webapp-plugin",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }

@@ -20,11 +20,11 @@ $(function() {
     _$content: null,
     _base: null,
     _highlightHash: null,
-    _allowedURI: /(^class\/|^file\/|^index.html|^identifiers.html|^source.html)/,
+    _allowedURI: /(^class\/|^file\/|^typedef\/|^test-file\/|^index.html|^identifiers.html|^source.html|^test.html|^$)/,
 
     getBase: function() {
       var base = $('base')[0];
-      return base.href.replace(/\#.*/, '').replace(/(index.html|identifiers.html|source.html)$/, '');
+      return base.href.replace(/\#.*/, '').replace(/(index.html|identifiers.html|source.html|test.html)$/, '');
     },
 
     setUpEventListeners: function() {
@@ -78,6 +78,8 @@ $(function() {
 
       var href = this._base+atob(hash.slice(6));
       this.loadPathContent(href, function() {
+        this.triggerReload();
+        this.reloadScripts();
         this.reloadPrettyPrint(this._highlightHash);
         if (!this._highlightHash) {
           this._$window.scrollTop(0);
@@ -110,6 +112,15 @@ $(function() {
       var a = document.createElement('a');
       a.href = uri;
       return a;
+    },
+
+    triggerReload: function() {
+      $(window).trigger("reload");
+    },
+
+    reloadScripts: function() {
+      var scripts = $('body > script[src="script/test-summary.js"]').remove();
+      $('body').append(scripts);
     },
 
     reloadPrettyPrint: function(hash) {
