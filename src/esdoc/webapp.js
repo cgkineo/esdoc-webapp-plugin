@@ -20,11 +20,11 @@ $(function() {
     _$content: null,
     _base: null,
     _highlightHash: null,
-    _allowedURI: /(^class\/|^file\/|^typedef\/|^test-file\/|^index.html|^identifiers.html|^source.html|^test.html|^$)/,
+    _allowedURI: /(^class\/|^file\/|^typedef\/|^test-file\/|^variable\/index.html|^index.html|^identifiers.html|^source.html|^test.html|^$)/,
 
     getBase: function() {
       var base = $('base')[0];
-      return base.href.replace(/\#.*/, '').replace(/(index.html|identifiers.html|source.html|test.html)$/, '');
+      return base.href.replace(/\#.*/, '').replace(/(|variable\/index.html|index.html|identifiers.html|source.html|test.html)$/, '');
     },
 
     setUpEventListeners: function() {
