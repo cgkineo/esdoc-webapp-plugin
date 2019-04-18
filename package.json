@@ -22,5 +22,5 @@
   "license": "GPL",
   "main": "src/Plugin.js",
   "name": "esdoc-webapp-plugin",
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
